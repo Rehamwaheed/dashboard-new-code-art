@@ -1,15 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModalModule } from 'ngx-modal';
-import { CountryComponent } from '../country.component';
+
 import { Routes, RouterModule } from '@angular/router';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { CitiesComponent } from '../cities.component';
+
+
 const childRoutes: Routes = [
   {
       path: '',
-      component:CountryComponent
-  }
+      component:CitiesComponent
+  } 
 ];
 
 export const routing = RouterModule.forChild(childRoutes);
@@ -25,7 +30,7 @@ export const routing = RouterModule.forChild(childRoutes);
 
 ],
 declarations: [
-    CountryComponent
+  CitiesComponent
 ]
 })
-export class CountryModule { }
+export class CityModule { }

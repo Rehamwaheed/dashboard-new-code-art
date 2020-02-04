@@ -1,20 +1,24 @@
 <div class="row">
   <div class="col-md-12">
-    <button class="btn btn-primary" (click)="seventhModal.open()">أضافة بلد</button>
+    <button class="btn btn-primary" (click)="seventhModal.open()">أضافة فئة</button>
     <br>
     <br>
       <table class="table table-bordered table-hover">
         <thead>
           <tr>
             <th>الرقم</th>
-            <th>الاسم</th>
+            <th>الأسم </th>
+            
+            <!-- <th>البلد</th>
+            <th>المدينة</th> -->
             <th></th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let item of country | paginate: { id: 'pager', itemsPerPage: pageSize, currentPage: pageNumber};let index = index">
+          <tr *ngFor="let item of categories | paginate: { id: 'pager', itemsPerPage: pageSize, currentPage: pageNumber};let index = index">
             <td>{{item.id}}</td>
             <td>{{item.name}}</td>
+         
             <td>
               <span class="label label-info">info</span>
             </td>
@@ -49,14 +53,18 @@
 
 <modal #seventhModal >
   <modal-header>
-    <h3>أضافة بلد</h3>
+    <h3>أضافة فئة</h3>
   </modal-header>
   <modal-content>
-    <label class="control-label">الاسم</label>
-    <input type="text" class="form-control" [(ngModel)]="name" placeholder="Text Input">
+    <form [formGroup]="categoryForm" >
+    <label class="control-label">اسم المستخدم</label>
+    <input type="text" class="form-control" formControlName="name" placeholder="Text Input">
+    <br>
+ 
+  </form>
   </modal-content>
   <modal-footer>
-    <button class="btn btn-primary" (click)="addcountry()">حفظ</button>
+    <button class="btn btn-primary" (click)="addcategory()">حفظ</button>
     <button class="btn btn-danger" (click)="closeModal(seventhModal)">غلق</button>
   </modal-footer>
 </modal>

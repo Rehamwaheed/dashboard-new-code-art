@@ -15,6 +15,16 @@ export let MENU_ITEM = [
         icon: 'diamond'
     },
     {
+        path: 'clients',
+        title: ' العملاء ',
+        icon: 'users'
+    },
+    {
+        path: 'provider',
+        title: ' مقدمي الخدمات ',
+        icon: 'user'
+    },
+    {
         path: 'profile',
         title: 'بروفايل العميل ',
         icon: 'user'
@@ -24,6 +34,23 @@ export let MENU_ITEM = [
         title: ' البلاد ',
         icon: 'globe'
     },
+    {
+        path: 'city',
+        title: ' مدن ',
+        icon: 'flag'
+    },
+    
+    {
+        path: 'category',
+        title: ' الفئات (category) ',
+        icon: 'diamond'
+    },
+    {
+        path: 'service',
+        title: ' خدمات ',
+        icon: 'cogs'
+    },
+    
     {
         path: 'ui',
         title: 'UI Element',
