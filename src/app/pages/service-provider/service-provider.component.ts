@@ -80,15 +80,18 @@ city:'',
     )
 }
 fileEvent(e){
+  
   this.filedata = e.target.files[0];
   var myFormData = new FormData();
   
 myFormData.append('image',this.filedata);
-
+console.log(myFormData.getAll('image'))
   this.Service.onuploadSubmit(myFormData).subscribe(response => {
+    console.log("kkk")
+    console.log( response["data"] );
     this.uploadedFile=response["data"];
    // console.log(this.uploadedFile);
-    console.log( "response : " + JSON.stringify( response ) );
+
 }); 
   
 }
@@ -119,7 +122,7 @@ addprovider()
   Object.assign(this.newprovider,this.providerForm.value)
 
  this.newprovider.image=this.uploadedFile;
- console.log(this.newprovider)
+ console.log(this.newprovider.image)
   this.Service.postprovider(this.newprovider).subscribe(
     response=>{
       console.log(response)
