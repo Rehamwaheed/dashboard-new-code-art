@@ -1,0 +1,73 @@
+<div class="row">
+  <div class="col-md-12">
+    <!-- <button class="btn btn-primary" (click)="seventhModal.open()">أضافة  خدمة</button> -->
+    <br>
+    <br>
+    <div class="row">
+    
+      <div class="col-md-6" *ngFor="let item of result">
+        <div id="text-output">
+          <h3 style="color:brown">{{item.id}}/{{item.title}}</h3>
+          <p>
+            {{item.description}}
+          </p>
+          <img style="border: brown;" [src]="item.image">
+          <h4><span style="color:red">الخصم:</span> {{item.discount}}</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 
+<modal #seventhModal >
+  <modal-header>
+    <h3>أضافة عميل</h3>
+  </modal-header>
+  <modal-content>
+    <form [formGroup]="providerForm" >
+    <label class="control-label">الأسم</label>
+    <input type="text" class="form-control" formControlName="name" placeholder="Text Input">
+    <br>
+    <label class="control-label">الايميل</label>
+    <input type="text" class="form-control" formControlName="email"  placeholder="Text Input">
+    <br>
+    <label class="control-label">الباسورد</label>
+    <input type="text" class="form-control" formControlName="password"   placeholder="Text Input">
+    <br>
+    <label class="control-label">التليفون</label>
+    <input type="text" class="form-control" formControlName="phone"  placeholder="Text Input">
+    <br>
+    <div class="form-group">
+      <label class="control-label">البلاد</label>
+      <select name="select" formControlName="country"  id="select1" class="form-control" (ngModelChange)="onSelecttype($event)">
+        <option *ngFor="let countries of country" [value]="countries.name" >{{countries.name}}</option>
+        
+   
+      </select>
+     
+    </div>
+    <br>
+    <div class="form-group">
+      <label class="control-label">المدن</label>
+      <select name="select" formControlName="city"  id="select2" class="form-control">
+        <option *ngFor="let cities of city" [value]="cities.name" >{{cities.name}}</option>
+      
+      </select>
+     
+    </div>
+    <br>
+    <div class="form-group">
+      <label>الصورة</label><br>
+      <label class="image-upload-container btn btn-success btn-xl">
+          <div class="uploadPhoto"> <span class="glyphicon glyphicon-upload"></span> &nbsp; Uplaod photo....</div>
+          <input type="file" accept="image/*" formControlName="image" #fileupload (change)="fileEvent($event)" style="display: none;">
+      </label>
+  </div>
+
+  </form>
+  </modal-content>
+  <modal-footer>
+    <button class="btn btn-primary" (click)="addprovider()">حفظ</button>
+    <button class="btn btn-danger" (click)="closeModal(seventhModal)">غلق</button>
+  </modal-footer>
+</modal> -->

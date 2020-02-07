@@ -22,6 +22,11 @@ export const childRoutes: Routes = [
             { path: 'table', loadChildren: './table/table.module#TableModule' },
             { path: 'menu-levels', loadChildren: './menu-levels/menu-levels.module#MenuLevelsModule' },
             { path: 'country', loadChildren: './country/country/country.module#CountryModule' },
+            { path: 'clients', loadChildren: './clients/clients/clients.module#ClientsModule' },
+            { path: 'category', loadChildren: './category/category/category.module#CategoryModule' },
+            { path: 'city', loadChildren: './cities/city/city.module#CityModule' },
+            { path: 'service', loadChildren: './services/services/services.module#ServicesModule' },
+            { path: 'provider', loadChildren: './service-provider/service-provider/service-provider.module#ServiceProviderModule' },
         ]
     }
 ];

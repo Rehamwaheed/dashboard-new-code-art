@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { ModalModule } from 'ngx-modal';
 import { CountryComponent } from '../country.component';
 import { Routes, RouterModule } from '@angular/router';
-
+import { NgxPaginationModule } from 'ngx-pagination';
 const childRoutes: Routes = [
   {
       path: '',
@@ -19,7 +19,9 @@ export const routing = RouterModule.forChild(childRoutes);
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-  routing
+    NgxPaginationModule,
+  routing,
+  ModalModule
 
 ],
 declarations: [

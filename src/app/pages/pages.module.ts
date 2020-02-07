@@ -8,6 +8,8 @@ import { SharedModule } from '../shared/shared.module';
 /* components */
 import { PagesComponent } from './pages.component';
 import { LoginComponent } from './login/login.component';
+
+
 @NgModule({
     imports: [
         CommonModule,
@@ -18,6 +20,8 @@ import { LoginComponent } from './login/login.component';
     declarations: [
         PagesComponent,
         LoginComponent,
+ 
+     
        
     ]
 })
