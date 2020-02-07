@@ -79,6 +79,11 @@ city:'',
       }
     )
 }
+show(item)
+{
+  item="http://fakrah.com/"+item
+  return item
+}
 fileEvent(e){
   
   this.filedata = e.target.files[0];

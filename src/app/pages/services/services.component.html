@@ -3,19 +3,35 @@
     <!-- <button class="btn btn-primary" (click)="seventhModal.open()">أضافة  خدمة</button> -->
     <br>
     <br>
-    <div class="row">
-    
-      <div class="col-md-6" *ngFor="let item of result">
-        <div id="text-output">
-          <h3 style="color:brown">{{item.id}}/{{item.title}}</h3>
-          <p>
-            {{item.description}}
-          </p>
-          <img style="border: brown;" [src]="item.image">
-          <h4><span style="color:red">الخصم:</span> {{item.discount}}</h4>
-        </div>
-      </div>
-    </div>
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>الرقم</th>
+          <th>الأسم </th>
+          <th>الوصف</th>
+          <th>الخصم</th>
+         
+          <!-- <th>البلد</th>
+          <th>المدينة</th> -->
+          <th>الصورة</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of result ">
+          <td>{{item.id}}</td>
+          <td>{{item.title}}</td>
+          <td>{{item.description}}</td>
+          <td>{{item.discount}}</td>
+          <!-- <td>{{item.country}}</td>
+          <td>{{item.city}}</td> -->
+          <td><img width="100%" height="20%" [src]="show(item.image)"></td>
+          <td>
+            <span class="label label-info">info</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
 <!-- 

@@ -19,5 +19,9 @@ result:any[]=[]
       }
     )
   }
-
+  show(item)
+  {
+    item="http://fakrah.com/"+item
+    return item
+  }
 }
